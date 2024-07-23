@@ -52,7 +52,7 @@ auth sufficient pam_sss_gss.so
 ...
 ```
 
-5. /usr/local/bin/krb5-sudo.sh (chmod 400 && owner root)
+5. /usr/local/bin/krb5-sudo.sh (chmod 700 && owner root)
 ```sh
 #! /bin/bash
 # Let PAM uses S4U2Self ticket for incomming user in order to authenticate sudo through GSSAPI
