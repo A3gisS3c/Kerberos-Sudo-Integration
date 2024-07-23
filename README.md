@@ -1,6 +1,6 @@
 # Kerberos-Sudo-Integration
 
-Tired of typing your passwords 2000 times a day? Let me save your programmer fingers by integrating Kerberos with Sudo authentication. If you have already integrated Kerberos with your SSH authentication using the SSSD daemon, you will only need to type your password once during the validity period of your TGT (4 hours for a secure configuration).
+Tired of typing your passwords 2000 times a day? Let me save your programmer fingers by integrating Kerberos with Sudo authentication. While SSH is easily configurable to use Kerberos, the same cannot be said for Sudo. There is a significant lack of documentation or tutorials available online, which is why I am writing this post. If you have already integrated Kerberos with your SSH authentication using the SSSD daemon, you will only need to type your password once during the validity period of your TGT (4 hours for a secure configuration).
 
 Please note that the sample configuration files assume that SSH authentication with SSSD is already in place.
 
