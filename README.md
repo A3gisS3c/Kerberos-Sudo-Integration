@@ -4,7 +4,7 @@ Courte description.
 
 ## How it works
 
-![Screen](/screenshots/Kerberos-sudo.jng)
+![Screen](/screenshots/Kerberos-sudo.jpg)
 
 ## Requirements
 - krb5-user >= 1.19
