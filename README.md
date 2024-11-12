@@ -87,6 +87,14 @@ pam_gssapi_services = sudo, sudo-i
 ...
 ```
 
+## Cybersecurity Considerations
+To ensure secure Kerberos integration with sudo for passwordless privilege elevation, it is crucial to follow specific security practices:
+
+Keytab Rotation upon Revocation of Root Access: When revoking root access for a user, it is essential to renew or replace the keytab. If a former root-privileged user retains a copy of the keytab, they could potentially regain unauthorized root access using that file, even after their root privileges have been removed. Keytab rotation mitigates this risk by invalidating the compromised credentials.
+
+Management of S4U2Self Tickets and Monitoring of S4U2Proxy: While S4U2Self allows a service to obtain a service ticket on behalf of a user limited to that server (and not a Ticket Granting Ticket, or TGT), S4U2Proxy can extend this privilege, allowing the service to request tickets for other services on behalf of the user. Careful monitoring of S4U2Proxy usage is necessary, and access to services that can initiate these requests should be strictly limited. This approach minimizes the risk of privilege escalation or lateral movement within the network.
+
+
 # License
 MIT License
 
